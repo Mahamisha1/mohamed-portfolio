@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad's Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .skill-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px) scale(1.03);
+        }
+        .skill-card:hover .skill-icon {
+            transform: rotateY(180deg);
+        }
+        .skill-icon {
+            transition: all 0.6s ease;
+        }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1.5s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">My <span class="text-blue-600">Superpowers</span></h1>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">The skills I've mastered to create digital magic</p>
+        
+        <!-- 3D Skill Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Web Dev -->
+            <div class="skill-card bg-white rounded-xl shadow-xl overflow-hidden relative group">
+                <div class="p-6">
+                    <div class="skill-icon w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Web Development</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">HTML/CSS</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#3B82F6"
+                                        stroke-width="3"
+                                        stroke-dasharray="95, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">95%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">JavaScript</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#3B82F6"
+                                        stroke-width="3"
+                                        stroke-dasharray="85, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">85%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">PHP</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#3B82F6"
+                                        stroke-width="3"
+                                        stroke-dasharray="75, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                </div>
+            </div>
+            
+            <!-- Video Editing -->
+            <div class="skill-card bg-white rounded-xl shadow-xl overflow-hidden relative group">
+                <div class="p-6">
+                    <div class="skill-icon w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-film text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Video Editing</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">CapCut</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#8B5CF6"
+                                        stroke-width="3"
+                                        stroke-dasharray="90, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">90%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">VN</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#8B5CF6"
+                                        stroke-width="3"
+                                        stroke-dasharray="80, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">80%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Alight Motion</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#8B5CF6"
+                                        stroke-width="3"
+                                        stroke-dasharray="85, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                </div>
+            </div>
+            
+            <!-- Graphic Design -->
+            <div class="skill-card bg-white rounded-xl shadow-xl overflow-hidden relative group">
+                <div class="p-6">
+                    <div class="skill-icon w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-paint-brush text-pink-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Graphic Design</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Canva</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#EC4899"
+                                        stroke-width="3"
+                                        stroke-dasharray="95, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">95%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Adobe Express</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#EC4899"
+                                        stroke-width="3"
+                                        stroke-dasharray="80, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">80%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">PixelLab</span>
+                            <div class="relative w-16 h-16">
+                                <svg class="w-full h-full" viewBox="0 0 36 36">
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#e6e6e6"
+                                        stroke-width="3"
+                                    />
+                                    <path
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#EC4899"
+                                        stroke-width="3"
+                                        stroke-dasharray="85, 100"
+                                    />
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xs font-bold">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-pink-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interactive Skill Cloud -->
+        <div class="bg-white rounded-xl shadow-xl p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">My <span class="text-blue-600">Skill Ecosystem</span></h2>
+            <div class="flex flex-wrap justify-center gap-4" id="skill-cloud">
+                <!-- Skills will be added here dynamically -->
+            </div>
+        </div>
+        
+        <!-- Tools & Platforms -->
+        <div class="bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">My <span class="text-blue-600">Digital Workshop</span></h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">The tools and platforms I use to bring ideas to life</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-github text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">GitHub</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        Version control & collaboration
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">VS Code</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        My primary code editor
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-google-drive text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Google Drive</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        Cloud storage & collaboration
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-telegram text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Telegram</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        Communication & file sharing
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-figma text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Figma</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        UI/UX design & prototyping
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+                <div class="tool-card bg-gray-50 rounded-lg p-4 flex flex-col items-center group relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-terminal text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Command Line</span>
+                    <div class="tooltip absolute bottom-full mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        Power user terminal skills
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-solid border-gray-800 border-l-transparent border-r-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animate skill circles on scroll
+        const animateSkills = () => {
+            const circles = document.querySelectorAll('svg path:last-child');
+            circles.forEach(circle => {
+                const dashArray = circle.getAttribute('stroke-dasharray').split(',')[0];
+                circle.style.strokeDashoffset = dashArray;
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            circle.style.strokeDashoffset = '0';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(circle.parentElement.parentElement.parentElement);
+            });
+        };
+        
+        // Create interactive skill cloud
+        const createSkillCloud = () => {
+            const skills = [
+                { name: "HTML5", level: 95, category: "web" },
+                { name: "CSS3", level: 90, category: "web" },
+                { name: "JavaScript", level: 85, category: "web" },
+                { name: "PHP", level: 75, category: "web" },
+                { name: "Python", level: 70, category: "web" },
+                { name: "Tailwind CSS", level: 90, category: "web" },
+                { name: "CapCut", level: 90, category: "video" },
+                { name: "VN Editor", level: 80, category: "video" },
+                { name: "Alight Motion", level: 85, category: "video" },
+                { name: "Canva", level: 95, category: "design" },
+                { name: "Adobe Express", level: 80, category: "design" },
+                { name: "PixelLab", level: 85, category: "design" },
+                { name: "VS Code", level: 90, category: "tool" },
+                { name: "GitHub", level: 85, category: "tool" },
+                { name: "Figma", level: 75, category: "tool" }
+            ];
+            
+            const cloud = document.getElementById('skill-cloud');
+            
+            skills.forEach(skill => {
+                const skillElement = document.createElement('div');
+                let bgColor, textColor;
+                
+                switch(skill.category) {
+                    case 'web':
+                        bgColor = 'bg-blue-100';
+                        textColor = 'text-blue-800';
+                        break;
+                    case 'video':
+                        bgColor = 'bg-purple-100';
+                        textColor = 'text-purple-800';
+                        break;
+                    case 'design':
+                        bgColor = 'bg-pink-100';
+                        textColor = 'text-pink-800';
+                        break;
+                    default:
+                        bgColor = 'bg-gray-100';
+                        textColor = 'text-gray-800';
+                }
+                
+                // Size based on skill level
+                let sizeClass;
+                if (skill.level >= 90) sizeClass = 'text-xl px-6 py-3';
+                else if (skill.level >= 80) sizeClass = 'text-lg px-5 py-2';
+                else sizeClass = 'px-4 py-2';
+                
+                skillElement.className = `${bgColor} ${textColor} rounded-full font-medium ${sizeClass} cursor-pointer hover:scale-110 transition-transform shadow-md`;
+                skillElement.textContent = skill.name;
+                
+                // Add tooltip
+                skillElement.title = `${skill.name} - ${skill.level}% proficiency`;
+                
+                cloud.appendChild(skillElement);
+            });
+        };
+        
+        // Initialize everything when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            animateSkills();
+            createSkillCloud();
+        });
+    </script>
+</body>
+</html>
